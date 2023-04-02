@@ -7,6 +7,14 @@ centena, a dezena e a unidade.'''
 
 CDU = int(input("Insira um número inteiro de três algarismos: "))
 
+# Limita o valor no intervalo 0<=valor<=99
+
+while True:
+    if CDU >= -999 and CDU <= 999:
+        break
+    print("Valor inválido, tente novamente.")
+    CDU = int(input("Insira um número inteiro de três algarismos: "))
+
 # Defnine CDU
 
 C = CDU // 100
