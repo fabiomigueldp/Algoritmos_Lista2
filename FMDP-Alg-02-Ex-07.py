@@ -15,13 +15,16 @@ while True:
     print("Valor inválido, tente novamente.")
     CDU = int(input("Insira um número inteiro de três algarismos: "))
 
-# Defnine CDU
+# Separa CDU
 
-C = CDU // 100
-
-D = (CDU // 10) % 10
-
-U = CDU % 10
+if CDU < 0:
+    C = (-CDU // 100) # arredonda para baixo
+    D = (-CDU // 10) % 10
+    U = -CDU % 10
+else:
+    C = CDU // 100
+    D = (CDU // 10) % 10
+    U = CDU % 10
 
 # Imprime a resposta
 

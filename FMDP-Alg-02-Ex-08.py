@@ -15,3 +15,31 @@ while True:
         break
     print("Valor inválido, tente novamente.")
     CDU = int(input("Insira um número inteiro de três algarismos: "))
+
+# Separa CDU
+
+if CDU < 0:
+    C = (-CDU // 100) # arredonda para baixo
+    D = (-CDU // 10) % 10
+    U = -CDU % 10
+else:
+    C = CDU // 100
+    D = (CDU // 10) % 10
+    U = CDU % 10
+
+# Gera M
+'''
+CM = U * 100
+
+DM = D * 10
+
+UM = C
+'''
+
+M = U * 100 + D * 10 + C
+
+# Imprime M
+
+print("   Considerando que o número inserido é N, constituido por três algarismos, centena (C); dezena (D);")
+print("unidade (U), organizados dessa forma como CDU, um número M imaginado a partir de N, utilizando os")
+print(f"algarismos de N, mas na ordem UDC, será M = {M}.")
